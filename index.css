@@ -1,0 +1,64 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  font-size: 1.1rem;
+  font-family: monospace;
+  border-radius: 0.25rem;
+  background: gainsboro;
+  padding: 0.5rem;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+.calculator .result {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background: whitesmoke;
+  outline: none;
+  border: 0.1rem solid grey;
+  text-align: right;
+}
+.calculator .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calculator .container button {
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  flex: 0 0 calc(25% - 1rem);
+  cursor: pointer;
+  box-shadow: 0 0.25rem grey;
+}
+.calculator .container button:active {
+  box-shadow: 0 0 grey;
+  transform: translateY(0.25rem);
+}
+.calculator .container .button-C {
+  background: red;
+  color: #fff;
+}
+.calculator .container .button-operator {
+  background: dodgerblue;
+  color: #fff;
+}
